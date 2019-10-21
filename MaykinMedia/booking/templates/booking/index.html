@@ -1,0 +1,12 @@
+<form action="" method="post">
+    <label for="city">City</label>
+    <input id="city" type="text" name="your_name">
+    <input type="submit" value="OK">
+</form>
+{% if object_list %}
+    {% for hotel in object_list %}
+        <li>{{hotel.hotel_name}}</li>
+    {% endfor %}
+{% else %} 
+    <p>no hotels available</p>
+{% endif %}

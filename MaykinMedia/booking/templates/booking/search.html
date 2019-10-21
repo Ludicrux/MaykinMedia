@@ -1,0 +1,16 @@
+{% if hotels|length == 0 %}
+<p>There are no available hotels in this city</p>
+    {% elif hotels|length > 0 %}
+    <p>There is 1 available hotel in this area</p>
+{% else %}
+    <p>There are  Hotels in this City</p>
+{% endif %}
+
+
+{% if hotels %}
+    {% for hotel in hotels %}
+        <li>{{hotel.hotel_name}}</li>
+    {% endfor %}
+{% else %} 
+    <p>no hotels available</p>
+{% endif %}
